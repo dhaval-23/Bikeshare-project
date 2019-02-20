@@ -1,0 +1,30 @@
+def get_filters():
+    city_set = {'chicago', 'new york city', 'washington'}    
+    print('Hello! Let\'s explore some US bikeshare data!')
+    city_input = None
+     while (city_input not in city_set):
+           city_input = input('\nWould you like to explore the data for Chicago, New York City or Washington? - ').lower()
+           if city_input not in city_set:
+              print('Invalid input!\n')
+              continue
+           else:
+              break
+    month_set = {'january', 'february', 'march', 'april', 'may', 'june'}
+    month_input = None
+    while (month_input not in month_set):
+      month_input = input('\nWhich month would you like to explore the data for? - ').lower()
+      if month_input not in month_set:
+         print('Invalid input!\n')
+         continue
+      else:
+         break
+    day_set = {'sunday', 'monday', 'tuesday', 'wendesday', 'thrusday', 'friday'}
+    day_input = None
+    while (day_input not in day_set):
+      day_input = input('\nWhich day would you like to explore the data for? - ').lower()
+      if day_input not in day_set:
+         print('Invalid input!\n')
+         continue
+      else:
+         break
+         return city, month, day
